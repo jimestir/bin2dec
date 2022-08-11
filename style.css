@@ -72,7 +72,7 @@ input[type="number"] {
   padding-top: 2px;
   width: 300px;
 }
-button {
+.subform button {
   background-color: #ffb201;
   border-radius: 20px;
   flex-shrink: 1;
@@ -100,4 +100,52 @@ button > img {
 
 .custom-shape-divider-bottom-1660135699 .shape-fill {
   fill: #ffffff;
+}
+
+.modal {
+  backdrop-filter: blur(5px);
+  background-color: #ffffffae;
+  border-radius: 10px;
+  border: 1px black solid;
+  box-shadow: 7px 7px 0px #11152e;
+  height: 350px;
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 650px;
+  z-index: -1;
+}
+.visible {
+  opacity: 1;
+  z-index: 1;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px 0 30px;
+}
+.modal__header h2 {
+  font-family: "Akshar", sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-top: 0px;
+}
+.close {
+  background-color: #ffb201;
+  border-radius: 20px;
+  height: 38px;
+  width: 38px;
+}
+
+.modal__content {
+  align-items: center;
+  display: flex;
+  font-family: "Akshar", sans-serif;
+  font-size: 1.4rem;
+  height: 200px;
+  justify-content: center;
 }
