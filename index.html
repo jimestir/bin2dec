@@ -22,18 +22,23 @@
             <div>Binary to Decimal</div>
           </h1>
         </header>
-        <div class="form">
+        <form action="" class="form">
           <div class="subform">
-            <input id="input" type="number" step="none" />
-            <button onclick="bin2dic()">
-              <img src="/assets/icon-calculator.svg" alt="" />
+            <input
+              id="input"
+              type="number"
+              required="/[01]/"
+              placeholder="Please enter a binary number..."
+            />
+            <button onclick="bin2dic(event)">
+              <img src="/assets/icon-calculator.svg" alt="icon-calculator" />
             </button>
           </div>
           <div id="result"></div>
-        </div>
+        </form>
       </div>
       <div class="subcontainer--img">
-        <img src="/assets/frontpage.png" alt="" />
+        <img src="/assets/frontpage.png" alt="front page" />
       </div>
     </div>
     <div class="modal">
@@ -47,12 +52,12 @@
     modal.classList.toggle("visible");
         '
         >
-          <img src="/assets/icon-close.svg" alt="" />
+          <img src="/assets/icon-close.svg" alt="icon-close" />
         </button>
       </div>
 
       <div class="modal__content">
-        <p class="response">numero invalido solo se puede suministrar 0 y 1</p>
+        <p class="response"></p>
       </div>
     </div>
     <div class="custom-shape-divider-bottom-1660135699">
