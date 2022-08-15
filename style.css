@@ -102,9 +102,10 @@ button > img {
   fill: #ffffff;
 }
 
-.modal {
-  backdrop-filter: blur(5px);
-  background-color: #ffffffae;
+.modal,
+.modal--result {
+  backdrop-filter: blur(3px);
+  background-color: #ffffffa1;
   border-radius: 10px;
   border: 1px black solid;
   box-shadow: 7px 7px 0px #11152e;
@@ -116,10 +117,13 @@ button > img {
   transform: translate(-50%, -50%);
   width: 650px;
   z-index: -1;
+  transition: opacity 0.2s;
 }
-.visible {
+.visible,
+.visible--result {
   opacity: 1;
-  z-index: 1;
+  z-index: 11;
+  transition: opacity 0.2s;
 }
 
 .modal__header {
@@ -134,7 +138,8 @@ button > img {
   margin-bottom: 0;
   margin-top: 0px;
 }
-.close {
+.close,
+.close--result {
   background-color: #ffb201;
   border-radius: 20px;
   height: 38px;
@@ -148,4 +153,21 @@ button > img {
   font-size: 1.4rem;
   height: 200px;
   justify-content: center;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #000000cb;
+  opacity: 0;
+  z-index: -1;
+  backdrop-filter: blur(2px);
+  transition: opacity 0.5s;
+}
+.visible--backdrop {
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.5s;
 }
