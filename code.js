@@ -8,7 +8,8 @@ let bin = null;
 let result = 0;
 let j = 0;
 let prevBin = 0;
-const DIGIT__BIN = 8;
+const MAX_BIN_DIGITS = 8;
+
 function validationBin(bin) {
   // if (prevBin === bin) {
   //   prevBin = bin;
@@ -18,7 +19,7 @@ function validationBin(bin) {
   if (r.test(bin)) {
     response.innerHTML = "Invalid number can only be supplied 0 and 1";
     return false;
-  } else if (bin.length > DIGIT__BIN) {
+  } else if (bin.length > MAX_BIN_DIGITS) {
     response.innerHTML = "Cannot be more than eight digits supplied";
     return false;
   } else return true;
@@ -27,12 +28,12 @@ function validationBin(bin) {
 function bin2dic(e) {
   e.preventDefault();
   bin = document.getElementById("input").value;
-  bin.length < DIGIT__BIN
-    ? (bin = "0".repeat(DIGIT__BIN - bin.length) + bin)
+  bin.length < MAX_BIN_DIGITS
+    ? (bin = "0".repeat(MAX_BIN_DIGITS - bin.length) + bin)
     : "";
   result = 0;
   j = 0;
-  for (let i = DIGIT__BIN - 1; i >= 0; i--) {
+  for (let i = MAX_BIN_DIGITS - 1; i >= 0; i--) {
     result += parseInt(bin[j]) * Math.pow(2, i);
     j++;
   }
