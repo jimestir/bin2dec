@@ -30,7 +30,7 @@ function bin2dic(e) {
     : "";
   result = 0;
   j = 0;
-  for (let i = DIGIT__BIN; i > 0; i--) {
+  for (let i = DIGIT__BIN - 1; i >= 0; i--) {
     result += parseInt(bin[j]) * Math.pow(2, i);
     j++;
   }
