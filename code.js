@@ -16,11 +16,14 @@ function validationBin(bin) {
   //   return false;
   // }
   // prevBin = bin;
+
   if (r.test(bin)) {
-    response.innerHTML = "Invalid number can only be supplied 0 and 1";
+    renderContent(response, "Supplied number isn't a binary number");
+    //response.innerHTML = "Invalid number can only be supplied 0 and 1";
     return false;
   } else if (bin.length > MAX_BIN_DIGITS) {
-    response.innerHTML = "Cannot be more than eight digits supplied";
+    renderContent(response, "Supplied number can't have more than 8 digits");
+    //response.innerHTML = "Cannot be more than eight digits supplied";
     return false;
   } else return true;
 }
@@ -42,10 +45,14 @@ function bin2dic(e) {
     document.getElementById("input").value = "";
     modalResult.classList.toggle("visible--result");
     backdrop.classList.toggle("visible--backdrop");
-    responseResult.innerHTML = result;
+    renderContent(responseResult, result);
   } else {
     document.getElementById("input").value = "";
     backdrop.classList.toggle("visible--backdrop");
     modalError.classList.toggle("visible--error");
   }
+}
+
+function renderContent(el, content) {
+  el.innerHTML = content;
 }
