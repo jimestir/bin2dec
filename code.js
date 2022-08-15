@@ -1,6 +1,6 @@
 let response = document.querySelector(".response");
 const responseResult = document.querySelector(".response--result");
-const modal = document.querySelector(".modal");
+const modalError = document.querySelector(".modal--error");
 const backdrop = document.querySelector(".backdrop");
 const modalResult = document.querySelector(".modal--result");
 const r = /[^01]/g;
@@ -45,6 +45,6 @@ function bin2dic(e) {
   } else {
     document.getElementById("input").value = "";
     backdrop.classList.toggle("visible--backdrop");
-    modal.classList.toggle("visible");
+    modalError.classList.toggle("visible--error");
   }
 }
