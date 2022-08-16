@@ -49,11 +49,13 @@ function handleClick(e) {
     clearInput();
     modalResult.classList.toggle("visible--result");
     backdrop.classList.toggle("visible--backdrop");
+    document.querySelector(".close--result").focus();
     renderContent(responseResult, conversionResult);
   } else {
     clearInput();
     renderContent(response, isValidBinary.msg);
     backdrop.classList.toggle("visible--backdrop");
     modalError.classList.toggle("visible--error");
+    document.querySelector(".close--error").focus();
   }
 }
