@@ -24,7 +24,7 @@ function bin2dec(bin) {
   let result = 0;
 
   for (let index = 0; index < bin.length; index++) {
-    result += parseInt(bin[index]) * Math.pow(2, index);
+    result += parseInt(bin[bin.length - index -1]) * Math.pow(2, index);
   }
 
   return result;
