@@ -23,7 +23,7 @@
               <div>Binary to Decimal</div>
             </h1>
           </header>
-          <form action="" class="form">
+          <form onsubmit="handleClick(e)" class="form">
             <div class="subform">
               <input
                 id="input"
@@ -31,7 +31,7 @@
                 required="/[01]/"
                 placeholder="Please enter a binary number..."
               />
-              <button onclick="bin2dic(event)">
+              <button onclick="handleClick(event)">
                 <img src="/assets/icon-calculator.svg" alt="icon-calculator" />
               </button>
             </div>
